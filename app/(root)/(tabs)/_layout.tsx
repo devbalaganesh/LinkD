@@ -1,8 +1,7 @@
 import { Tabs } from "expo-router";
 import { Image, View } from "react-native";
 import { ImageSourcePropType } from "react-native";
-import images from "@assets/images/constants/image"; // adjust if needed
-
+import icons from "@assets/images/constants/icons";
 const TabIcon = ({
   focused,
   image,
@@ -15,7 +14,7 @@ const TabIcon = ({
       <Image
         source={image}
         resizeMode="contain"
-        tintColor={focused ? "#0061FF" : "#999999"}
+        tintColor={ focused ? "#FFFFFF" : "#8E8E8E"}
         className="size-5"
       />
     </View>
@@ -28,10 +27,10 @@ export default function TabLayout() {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: "white",
+          backgroundColor: "black",
           borderTopColor: "#E5E5E5",
           borderTopWidth: 1,
-          minHeight: 70,
+          minHeight: 50,
         },
       }}
     >
@@ -40,7 +39,7 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} image={images.hingeLogo} />
+            <TabIcon focused={focused} image={icons.home} />
           ),
         }}
       />
@@ -49,7 +48,7 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} image={images.hingeLogo} />
+            <TabIcon focused={focused} image={icons.star} />
           ),
         }}
       />
@@ -58,7 +57,7 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} image={images.hingeLogo} />
+            <TabIcon focused={focused} image={icons.Likes} />
           ),
         }}
       />
@@ -68,7 +67,7 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} image={images.hingeLogo} />
+            <TabIcon focused={focused} image={icons.Matches} />
           ),
         }}
       />
@@ -77,7 +76,7 @@ export default function TabLayout() {
         options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} image={images.hingeLogo} />
+            <TabIcon focused={focused} image={icons.Profile} />
           ),
         }}
       />
